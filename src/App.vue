@@ -1,33 +1,42 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/romain">Romain</router-link>
+      <router-link to="/">Home</router-link> -|-
+      <router-link to="/students">Students</router-link> -|-
+      <router-link to="/staff">Staff</router-link> -|-
+      <router-link to="/houses">Houses</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
+
+@import url(https://fonts.googleapis.com/css?family=Homemade+Apple);
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font:25px/1.3 'Homemade Apple', sans-serif;
+  color: #191919;
+  margin: 80px;
+  text-align:center;
+  background-image: url('https://i.pinimg.com/originals/24/01/ab/2401ab3e767a38150ff7871a6a0f9b32.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #nav {
-  padding: 30px;
+  padding: 60px;
 }
 
 #nav a {
+  font-size: 40px;
   font-weight: bold;
-  color: #2c3e50;
+  color: #191919;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: darkgreen;
 }
+
 </style>

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -11,19 +11,24 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/students',
+    name: 'Students',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Students.vue')
   },
   {
-    path: '/romain',
-    name: 'Romain',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Romain.vue')
+    path: '/staff',
+    name: 'Staff',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Staff.vue')
+  },
+  {
+    path: '/houses',
+    name: 'Houses',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Houses.vue')
   }
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
 
 export default router
