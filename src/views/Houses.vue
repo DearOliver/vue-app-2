@@ -15,26 +15,27 @@
       </li>
     </ul>
     <hr>
-    <HouseCharacters v-if="is_house" :house="housepicked"/>
+    <HouseCharacters v-if="is_house" :housedata="housedata"/>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
   import HouseCharacters from '@/components/HouseCharacters.vue'
+  import axios from 'axios'
 
   export default {
     name: 'Houses',
     data: function(){
       return{
-        housepicked: null,
+        housedata: null,
         is_house: false
       }
     },
     methods:{
       displayhouse: function(house){
-        this.housepicked = house;
-        this.is_house = true
+        this.is_house = true;
+        axios.get('https://hp-api.herokuapp.com/api/characters/house/' +  house).then(response => this.housedata = response['data']);
       }
     },
     components: {

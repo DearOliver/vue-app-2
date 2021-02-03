@@ -17,7 +17,7 @@
 #app {
   font:25px/1.3 'Homemade Apple', sans-serif;
   color: #191919;
-  margin: 80px;
+  padding : 0 0 20px 0;
   text-align:center;
   background-image: url('https://i.pinimg.com/originals/24/01/ab/2401ab3e767a38150ff7871a6a0f9b32.jpg');
   background-repeat: no-repeat;
